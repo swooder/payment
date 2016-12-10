@@ -1,0 +1,20 @@
+{
+    "name": "woodfish/payment",
+    "description": "集成支付宝、微信、银联支付",
+    "authors": [
+        {
+            "name": "shaojie",
+            "email": "shaojie519@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "omnipay/common": "~2.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Woodfish\\Component\\Payment\\": "src"
+        }
+    }
+}
