@@ -9,7 +9,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "omnipay/common": "~2.0"
+        "omnipay/common": "2.5.1"
     },
     "minimum-stability": "dev",
     "autoload": {
