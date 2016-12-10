@@ -6,14 +6,14 @@ namespace Woodfish\Component\Payment\AliPay;
  * Class MobileExpressGateway
  *
  * @package Omnipay\Alipay
- * @method \Omnipay\Common\Message\ResponseInterface authorize(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface completeAuthorize(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface capture(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface refund(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface void(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface createCard(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface updateCard(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface deleteCard(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface authorize(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface completeAuthorize(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface capture(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface refund(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface void(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface createCard(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface updateCard(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface deleteCard(array $options = array())
  */
 class MobileExpressGateway extends BaseAbstractGateway
 {

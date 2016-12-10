@@ -4,8 +4,8 @@
 namespace Woodfish\Component\Payment\UnionPay\Message;
 
 
-use Omnipay\Common\Message\AbstractResponse;
-use Omnipay\Common\Message\RedirectResponseInterface;
+use Woodfish\Component\Payment\Omnipay\Common\Message\AbstractResponse;
+use Woodfish\Component\Payment\Omnipay\Common\Message\RedirectResponseInterface;
 
 class WapExpressPurchaseResponse extends AbstractResponse implements RedirectResponseInterface
 {

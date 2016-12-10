@@ -1,7 +1,7 @@
 <?php
 
 namespace Woodfish\Component\Payment\UnionPay\Message;
-use Omnipay\Common\Message\AbstractRequest;
+use Woodfish\Component\Payment\Omnipay\Common\Message\AbstractRequest;
 
 
 abstract class BaseAbstractRequest extends AbstractRequest

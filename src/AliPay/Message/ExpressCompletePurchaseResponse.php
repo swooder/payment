@@ -2,7 +2,7 @@
 
 namespace Woodfish\Component\Payment\AliPay\Message;
 
-use Omnipay\Common\Message\AbstractResponse;
+use Woodfish\Component\Payment\Omnipay\Common\Message\AbstractResponse;
 
 class ExpressCompletePurchaseResponse extends AbstractResponse
 {

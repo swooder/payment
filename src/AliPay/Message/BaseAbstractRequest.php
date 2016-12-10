@@ -1,9 +1,9 @@
 <?php
 
-namespace Woodfish\Component\Payment\AliPay\Message;
+namespace Woodfish\Payment\AliPay\Message;
 
 use Exception;
-use Omnipay\Common\Message\AbstractRequest;
+use Woodfish\Component\Payment\Omnipay\Common\Message\AbstractRequest;
 
 abstract class BaseAbstractRequest extends AbstractRequest
 {

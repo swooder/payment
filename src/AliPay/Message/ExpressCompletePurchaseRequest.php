@@ -2,7 +2,7 @@
 
 namespace Woodfish\Component\Payment\AliPay\Message;
 
-use Omnipay\Common\Exception\InvalidRequestException;
+use Woodfish\Component\PaymentOmnipay\Common\Exception\InvalidRequestException;
 
 class ExpressCompletePurchaseRequest extends BasePurchaseRequest
 {

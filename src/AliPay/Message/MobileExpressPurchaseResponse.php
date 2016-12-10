@@ -2,8 +2,8 @@
 
 namespace Woodfish\Component\Payment\AliPay\Message;
 
-use Omnipay\Common\Message\AbstractResponse;
-use Omnipay\Common\Message\ResponseInterface;
+use Woodfish\Component\Payment\Omnipay\Common\Message\AbstractResponse;
+use Woodfish\Component\PaymentOmnipay\Common\Message\ResponseInterface;
 
 class MobileExpressPurchaseResponse extends AbstractResponse implements ResponseInterface
 {

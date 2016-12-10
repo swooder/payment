@@ -4,7 +4,7 @@
 namespace Woodfish\Component\Payment\UnionPay\Message;
 
 
-use Omnipay\Common\Message\AbstractResponse;
+use Woodfish\Component\Payment\Omnipay\Common\Message\AbstractResponse;
 
 class ExpressQueryResponse extends AbstractResponse
 {

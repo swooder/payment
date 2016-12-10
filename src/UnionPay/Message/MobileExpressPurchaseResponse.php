@@ -4,8 +4,8 @@
 namespace Woodfish\Component\Payment\UnionPay\Message;
 
 
-use Omnipay\Common\Message\AbstractResponse;
-use Omnipay\Common\Message\ResponseInterface;
+use Woodfish\Component\Payment\Omnipay\Common\Message\AbstractResponse;
+use Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface;
 
 class MobileExpressPurchaseResponse extends AbstractResponse implements ResponseInterface
 {

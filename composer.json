@@ -9,12 +9,12 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "omnipay/common": "3.0.x-dev"
+        "guzzlehttp/guzzle": "6.2.0"
     },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Woodfish\\Component\\Payment\\": "src"
+            "Woodfish\\Payment\\": "src"
         }
     }
 }

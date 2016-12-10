@@ -4,7 +4,7 @@
 namespace Woodfish\Component\Payment\WeChat\Message;
 
 
-use Omnipay\Common\Message\AbstractRequest;
+use Woodfish\Component\Payment\Omnipay\Common\Message\AbstractRequest;
 
 abstract class BaseAbstractRequest extends AbstractRequest
 {

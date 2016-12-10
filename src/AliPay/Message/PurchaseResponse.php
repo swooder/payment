@@ -1,9 +1,9 @@
 <?php
 
-namespace Woodfish\Component\Payment\AliPay\Message;
+namespace Woodfish\Payment\AliPay\Message;
 
-use Omnipay\Common\Message\AbstractResponse;
-use Omnipay\Common\Message\RedirectResponseInterface;
+use Woodfish\Component\Payment\Omnipay\Common\Message\AbstractResponse;
+use Woodfish\Component\Payment\Omnipay\Common\Message\RedirectResponseInterface;
 
 /**
  * Buckaroo Purchase Response

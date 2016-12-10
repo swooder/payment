@@ -2,21 +2,21 @@
 
 namespace Woodfish\Component\Payment\UnionPay;
 /**
- * @method \Omnipay\Common\Message\RequestInterface authorize(array $options = array())
- * @method \Omnipay\Common\Message\RequestInterface completeAuthorize(array $options = array())
- * @method \Omnipay\Common\Message\RequestInterface capture(array $options = array())
- * @method \Omnipay\Common\Message\RequestInterface purchase(array $options = array())
- * @method \Omnipay\Common\Message\RequestInterface completePurchase(array $options = array())
- * @method \Omnipay\Common\Message\RequestInterface refund(array $options = array())
- * @method \Omnipay\Common\Message\RequestInterface void(array $options = array())
- * @method \Omnipay\Common\Message\RequestInterface createCard(array $options = array())
- * @method \Omnipay\Common\Message\RequestInterface updateCard(array $options = array())
- * @method \Omnipay\Common\Message\RequestInterface deleteCard(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\RequestInterface authorize(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\RequestInterface completeAuthorize(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\RequestInterface capture(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\RequestInterface purchase(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\RequestInterface completePurchase(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\RequestInterface refund(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\RequestInterface void(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\RequestInterface createCard(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\RequestInterface updateCard(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\RequestInterface deleteCard(array $options = array())
  */
 
 
 
-use Omnipay\Common\AbstractGateway;
+use Woodfish\Component\Payment\Omnipay\Common\AbstractGateway;
 
 abstract class BaseAbstractGateWay extends AbstractGateway
 {

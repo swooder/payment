@@ -1,19 +1,19 @@
 <?php
 
-namespace Woodfish\Component\Payment\AliPay;
+namespace Woodfish\Payment\AliPay;
 
-use Omnipay\Common\AbstractGateway;
-use Omnipay\Common\Exception\InvalidRequestException;
+use Woodfish\Component\Payment\Omnipay\Common\AbstractGateway;
+use Woodfish\Component\Payment\Omnipay\Common\Exception\InvalidRequestException;
 
 /**
- * @method \Omnipay\Common\Message\ResponseInterface authorize(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface completeAuthorize(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface capture(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface refund(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface void(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface createCard(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface updateCard(array $options = array())
- * @method \Omnipay\Common\Message\ResponseInterface deleteCard(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface authorize(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface completeAuthorize(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface capture(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface refund(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface void(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface createCard(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface updateCard(array $options = array())
+ * @method \Woodfish\Component\Payment\Omnipay\Common\Message\ResponseInterface deleteCard(array $options = array())
  */
 abstract class BaseAbstractGateway extends AbstractGateway
 {
@@ -305,7 +305,7 @@ abstract class BaseAbstractGateway extends AbstractGateway
 
     /**
      * @param array $parameters[]
-     * @return \Omnipay\Common\Message\AbstractRequest
+     * @return \Woodfish\Component\Payment\Omnipay\Common\Message\AbstractRequest
      */
     public function refundPurchase(array $parameters = array())
     {
