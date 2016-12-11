@@ -1,6 +1,6 @@
 <?php
 
-namespace Woodfish\Payment\AliPay;
+namespace Woodfish\Component\Payment\AliPay;
 
 use Woodfish\Component\Payment\Omnipay\Common\AbstractGateway;
 use Woodfish\Component\Payment\Omnipay\Common\Exception\InvalidRequestException;
