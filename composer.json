@@ -14,7 +14,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Woodfish\\Payment\\": "src"
+            "Woodfish\\Component\\Payment\\": "src"
         }
     }
 }
