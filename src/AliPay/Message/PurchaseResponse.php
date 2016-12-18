@@ -1,6 +1,6 @@
 <?php
 
-namespace Woodfish\Payment\AliPay\Message;
+namespace Woodfish\Component\Payment\AliPay\Message;
 
 use Woodfish\Component\Payment\Omnipay\Common\Message\AbstractResponse;
 use Woodfish\Component\Payment\Omnipay\Common\Message\RedirectResponseInterface;

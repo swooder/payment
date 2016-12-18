@@ -1,6 +1,6 @@
 <?php
 
-namespace Woodfish\Payment\AliPay\Message;
+namespace Woodfish\Component\Payment\AliPay\Message;
 
 use Exception;
 use Woodfish\Component\Payment\Omnipay\Common\Message\AbstractRequest;
