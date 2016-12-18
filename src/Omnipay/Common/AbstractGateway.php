@@ -331,7 +331,9 @@ abstract class AbstractGateway implements GatewayInterface
      */
     protected function getDefaultHttpClient()
     {
+        return new Client(
 
+        );
     }
 
     /**
