@@ -9,7 +9,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "guzzlehttp/guzzle": "6.2.*"
+        "guzzlehttp/guzzle": "^6.3.*"
     },
     "minimum-stability": "dev",
     "autoload": {
