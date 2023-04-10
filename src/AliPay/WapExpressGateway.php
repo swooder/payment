@@ -43,7 +43,7 @@ class WapExpressGateway extends BaseAbstractGateway
 
     public function purchase(array $parameters = array())
     {
-        $this->setService('create_direct_pay_by_user');
+        $this->setService('alipay.trade.wap.pay');
         return $this->createRequest('\Woodfish\Component\Payment\AliPay\Message\WapExpressPurchaseRequest', $parameters);
     }
 
