@@ -9,20 +9,30 @@ abstract class BasePurchaseRequest extends BaseAbstractRequest
 
     protected $liveEndpoint = 'https://mapi.alipay.com/gateway.do';
 
+    protected $refundEndpoint = "https://openapi.alipay.com/gateway.do";
+
+    //网关
+    public $gatewayUrl = "https://openapi.alipay.com/gateway.do";
+    //返回数据格式
+    public $format = "json";
+    //api版本
+    public $apiVersion = "1.0";
+
+
 
     protected function validateData()
     {
         $this->validate(
-            'service',
-            'partner',
-            'key',
-            'seller_email',
-            'notify_url',
-            'return_url',
-            'out_trade_no',
-            'subject',
-            'input_charset',
-            'total_fee'
+//            'service',
+//            'partner',
+//            'key',
+//            'seller_email',
+//            'notify_url',
+//            'return_url',
+//            'out_trade_no',
+//            'subject',
+            'input_charset'
+//            'total_fee'
         );
     }
 
@@ -38,6 +48,17 @@ abstract class BasePurchaseRequest extends BaseAbstractRequest
         $this->setParameter('service', $value);
     }
 
+    public function getFormat()
+    {
+        return $this->getParameter('format');
+    }
+
+    public function setFormat($value)
+    {
+        $this->setParameter('format', $value);
+    }
+
+
 
     public function getOutTradeNo()
     {
@@ -49,6 +70,29 @@ abstract class BasePurchaseRequest extends BaseAbstractRequest
     {
         $this->setParameter('out_trade_no', $value);
     }
+
+    public function getProductCode()
+    {
+        return $this->getParameter('product_code');
+    }
+
+
+    public function setProductCode($value)
+    {
+        $this->setParameter('product_code', $value);
+    }
+
+
+    public function getTotalAmount()
+    {
+        return $this->getParameter('total_amount');
+    }
+
+    public function setTotalAmount($value)
+    {
+        $this->setParameter('total_amount', $value);
+    }
+
 
 
     public function getTransport()
@@ -62,10 +106,39 @@ abstract class BasePurchaseRequest extends BaseAbstractRequest
         $this->setParameter('transport', $value);
     }
 
+    public function getVersion()
+    {
+        return $this->getParameter('version');
+    }
+
+    public function setVersion($value)
+    {
+        $this->setParameter('version', $value);
+    }
 
     public function getBody()
     {
         return $this->getParameter('body');
+    }
+
+    public function getAppid()
+    {
+        return $this->getParameter('appid');
+    }
+
+    public function setAppid($value)
+    {
+        $this->setParameter('appid', $value);
+    }
+
+    public function getGoodsType()
+    {
+        return $this->getParameter('goods_type');
+    }
+
+    public function setGoodsType($value)
+    {
+        return $this->setParameter('goods_type', $value);
     }
 
 
@@ -232,6 +305,7 @@ abstract class BasePurchaseRequest extends BaseAbstractRequest
     {
         return $this->liveEndpoint;
     }
+
 
 
     /**

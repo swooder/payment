@@ -274,6 +274,11 @@ class ExpressCompletePurchaseRequest extends BasePurchaseRequest
             $result    = $this->verifyWithRSA($queryString, trim($publicKey), $requestSign);
 
             return $result;
+        } elseif ($signType == 'RSA2') {
+            $publicKey = $this->getAlipayPublicKey();
+            $result    = $this->verifyWithRSA2($queryString, trim($publicKey), $requestSign);
+
+            return $result;
         } else {
             return false;
         }
@@ -302,6 +307,15 @@ class ExpressCompletePurchaseRequest extends BasePurchaseRequest
         return $result;
     }
 
+    protected function verifyWithRSA2($data, $publicKey, $sign)
+    {
+        $publicKey = $this->prefixCertificateKeyPath($publicKey);
+        $res       = openssl_pkey_get_public($publicKey);
+        $result    = (bool) openssl_verify($data, base64_decode($sign), $res, OPENSSL_ALGO_SHA256);
+        openssl_free_key($res);
+
+        return $result;
+    }
 
     protected function isNotifyVerifiedOK()
     {

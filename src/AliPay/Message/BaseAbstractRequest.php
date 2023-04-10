@@ -22,7 +22,7 @@ abstract class BaseAbstractRequest extends AbstractRequest
 
     public function setSignType($value)
     {
-        if (in_array($value, array('md5', 'rsa'))) {
+        if (in_array($value, array('MD5', 'RSA', 'RSA2'))) {
             throw new Exception('sign_type should be upper case');
         }
         $this->setParameter('sign_type', $value);
@@ -40,7 +40,9 @@ abstract class BaseAbstractRequest extends AbstractRequest
         if ($signType == 'MD5') {
             $sign = $this->signWithMD5($query);
         } elseif ($signType == 'RSA' || $signType == '0001') {
-            $sign = $this->signWithRSA($query, $this->getPrivateKey());
+            $sign = $this->signWithRSA($query, $this->getPrivateKey(), 'RSA');
+        } elseif ($signType == 'RSA2') {
+            $sign = $this->signWithRSA($query, $this->getPrivateKey(), 'RSA2');
         } else {
             $sign = '';
         }
@@ -67,11 +69,15 @@ abstract class BaseAbstractRequest extends AbstractRequest
     }
 
 
-    protected function signWithRSA($data, $privateKey)
+    protected function signWithRSA($data, $privateKey, $signType)
     {
         $privateKey = $this->prefixCertificateKeyPath($privateKey);
         $res        = openssl_pkey_get_private($privateKey);
-        openssl_sign($data, $sign, $res);
+        if ($signType == 'RSA') {
+            openssl_sign($data, $sign, $res);
+        } elseif ($signType == 'RSA2') {
+            openssl_sign($data, $sign, $res, OPENSSL_ALGO_SHA256);
+        }
         openssl_free_key($res);
         $sign = base64_encode($sign);
 
