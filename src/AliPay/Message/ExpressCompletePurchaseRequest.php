@@ -212,7 +212,7 @@ class ExpressCompletePurchaseRequest extends BasePurchaseRequest
             $data['verify_success'] = $this->isSignMatch();
             $status                 = $this->getTradeStatus();
             $statusOk               = $status == 'TRADE_FINISHED' || $status == 'TRADE_SUCCESS';
-            $data['is_paid']        = $data['verify_success'] && $this->isNotifyVerifiedOK() && $statusOk;
+            $data['is_paid']        = $data['verify_success'] && $statusOk;
         } else {
             $status                 = $this->getTradeStatus();
             $statusOk               = $status == 'TRADE_FINISHED' || $status == 'TRADE_SUCCESS';
@@ -316,16 +316,6 @@ class ExpressCompletePurchaseRequest extends BasePurchaseRequest
 
         return $result;
     }
-
-    protected function isNotifyVerifiedOK()
-    {
-        if (preg_match("/true$/i", $this->verifyResponse)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
 
     public function getEndpoint()
     {
