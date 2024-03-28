@@ -53,7 +53,6 @@ class MobileExpressPurchaseRequest extends BasePurchaseRequest
             'version',
             'notify_url',
             'subject',
-            'subject',
             'out_trade_no',
             'total_amount',
             'product_code',

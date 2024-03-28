@@ -11,5 +11,12 @@ namespace Woodfish\Component\Payment\AliPay\Message;
 
 class ExpressCompleteRefundResponse extends ExpressCompletePurchaseResponse
 {
-
+    public function getResponseText()
+    {
+        if ($this->isSuccessful()) {
+            return 'success';
+        } else {
+            return 'fail';
+        }
+    }
 }

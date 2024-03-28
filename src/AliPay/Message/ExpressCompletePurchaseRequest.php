@@ -208,7 +208,6 @@ class ExpressCompletePurchaseRequest extends BasePurchaseRequest
         $data = $this->getRequestParams();
 
         if ($notifyId) {
-            $this->verifyResponse   = $this->getVerifyResponse($notifyId);
             $data['verify_success'] = $this->isSignMatch();
             $status                 = $this->getTradeStatus();
             $statusOk               = $status == 'TRADE_FINISHED' || $status == 'TRADE_SUCCESS';
@@ -221,19 +220,6 @@ class ExpressCompletePurchaseRequest extends BasePurchaseRequest
         }
 
         return $this->response = new ExpressCompletePurchaseResponse($this, $data);
-    }
-
-
-    protected function getVerifyResponse($notifyId)
-    {
-        $partner  = $this->getPartner();
-        $endpoint = $this->getEndpoint();
-
-        $url = "{$endpoint}partner={$partner}&notify_id={$notifyId}";
-
-        $responseTxt = $this->getHttpResponseGET($url, $this->getCacertPath());
-
-        return $responseTxt;
     }
 
 

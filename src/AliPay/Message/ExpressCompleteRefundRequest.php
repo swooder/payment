@@ -22,16 +22,13 @@ class ExpressCompleteRefundRequest extends ExpressCompletePurchaseRequest
     {
         $notify_id = $this->getNotifyId();
         $sign = $this->getRequestParam('sign');
-        $validateSign = !empty($sign);
         $this->verifyResponse = 'true';
         if (!is_null($notify_id))
         {
-            $this->verifyResponse = $this->getVerifyResponse($this->getNotifyId());
             $validateSign = true;
         }
         $data = array();
-        $data['verify_response'] = $this->verifyResponse;
-        if ($this->isResponseOk($this->verifyResponse) && (!$validateSign || $this->isSignMatch()))
+        if ($this->isSignMatch())
         {
             $data['verify_success'] = true;
         }
